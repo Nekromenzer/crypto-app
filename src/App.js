@@ -1,11 +1,16 @@
-import './App.css';
+import React from 'react'
+import './App.css'
+import { Switch, route, Link } from 'react-router-dom'
+import { Layout, Typography, Space } from 'antd'
 
-const App=()=> {
+const App = () => {
   return (
-    <div className="App">
-   app
+    <div className='App'>
+      <div className='navbar'></div>
+      <div className='main'></div>
+      <div className='footer'></div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
