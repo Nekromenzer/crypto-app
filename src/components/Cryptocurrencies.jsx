@@ -8,13 +8,30 @@ import { useGetCryptosQuery } from '../services/CryptoApi'
 const Cryptocurrencies = ({ simplified }) => {
   const count = simplified ? 10 : 100
   const { data: cryptosList, isFetching } = useGetCryptosQuery(count)
- 
+
+  const [cryptos, setCryptos] = React.useState(cryptosList?.data?.coins)
+  const [search, setSearch] = React.useState('')
+
+  React.useEffect(() => {
+    const filterData = cryptosList?.data?.coins.filter(coin =>
+      coin.name.toLowerCase().includes(search.toLowerCase())
+    )
+    setCryptos(filterData)
+  }, [cryptosList, search])
 
   if (isFetching) return 'loading......'
   return (
     <>
+      {!simplified && (
+        <div className='search-crypto'>
+          <Input
+            placeholder='search currency'
+            onChange={e => setSearch(e.target.value)}
+          />
+        </div>
+      )}
       <Row gutter={[32, 32]} className='crypto-card-container'>
-        {cryptosList?.data?.coins.map(currency => (
+        {cryptos?.map(currency => (
           <Col xs={24} sm={12} lg={6} className='crypto-card' key={currency.id}>
             <Link to={`/crypto/${currency.id}`}>
               <Card
