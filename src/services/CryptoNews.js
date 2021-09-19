@@ -25,3 +25,5 @@ export const CryptoNewsApi = createApi({
     })
   })
 })
+
+export const { useGetCryptoNewsQuery } = CryptoNewsApi
