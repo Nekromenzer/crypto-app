@@ -13,7 +13,7 @@ import {
 
 const App = () => {
   return (
-    <div className='App'>
+    <div className='app'>
       <div className='navbar'>
         <Navbar />
       </div>
@@ -21,10 +21,10 @@ const App = () => {
         <Layout>
           <div className='routes'>
             <Switch>
-              <Route exact path='/exchanges'>
+              <Route exact path='/'>
                 <Homepage />
               </Route>
-              <Route exact path='/'>
+              <Route exact path='/exchanges'>
                 <Exchanges />
               </Route>
               <Route exact path='/cryptocurrencies'>
