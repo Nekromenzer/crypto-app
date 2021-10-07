@@ -1,13 +1,26 @@
-<h3 color="yellow">Cryptocurrency App</h3>
+<h2>Cryptocurrency App</h2>
 
-author - <a href="https://github.com/Nekromenzer">nekromenzer </a>
+<h3>Author</h3>
+Github - <a href="https://github.com/Nekromenzer">nekromenzer</a>
+LinkedIn - <a href="https://www.linkedin.com/in/maneesha-gimshan/">Maneesha Gimshan</a>
 
-Tech used - React | React router | redux | redux toolkit | Ant Design | Chart js 
+<h3>Tech used</h3>
+<ol>
+    <li>React</li>
+    <li>React router</li>
+    <li>redux toolkit</li>
+    <li>redux</li>
+    <li>Ant Design</li>
+    <li>Chart js </li>
+</ol>
 
-#To_start 
-01. npm install 
-02. npm start 
-    - project will start in http://localhost:3000/ 
+<h3>To Start..</h3>
+<ol>
+    <li>npm install</li>
+    <li>npm start</li>
+</ol>
+
+<p>project will start in http://localhost:3000/ </p> 
 
 
 
