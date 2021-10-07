@@ -19,6 +19,7 @@ import {
   useGetCryptoHistoryQuery
 } from '../services/CryptoApi'
 import LineChart from './LineChart'
+import Loader from './Loader'
 
 const { Title, Text } = Typography
 const { Option } = Select
@@ -27,7 +28,7 @@ const CryptoDetails = () => {
   const [timePeriod, setTimePeriod] = React.useState('7d')
   const { coinId } = useParams()
   const { data, isFetching } = useGetCryptoDetailsQuery(coinId)
-  const { data: coinHistory } = useGetCryptoHistoryQuery({ coinId, timePeriod  })
+  const { data: coinHistory } = useGetCryptoHistoryQuery({ coinId, timePeriod })
   const cryptoDetails = data?.data?.coin
 
   const time = ['3h', '24h', '7d', '30d', '1y', '3m', '3y', '5y']
@@ -95,7 +96,7 @@ const CryptoDetails = () => {
       icon: <ExclamationCircleOutlined />
     }
   ]
-  if (isFetching) return 'loading...'
+  if (isFetching) return <Loader />
   return (
     <Col className='crypto-card-container'>
       <Col className='coin-heading-container'>
