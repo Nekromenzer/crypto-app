@@ -1,4 +1,4 @@
-#Cryptocurrency App
+<h3 style="color:yellow">Cryptocurrency App</h3>
 
 author - <a href="https://github.com/Nekromenzer">nekromenzer </a>
 
