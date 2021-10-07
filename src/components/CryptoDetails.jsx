@@ -2,7 +2,7 @@ import React from 'react'
 import HTMLReactParser from 'html-react-parser'
 import { useParams } from 'react-router'
 import millify from 'millify'
-import { Col, Row, Typogarphy, Select, Typography } from 'antd'
+import { Col, Row, Select, Typography } from 'antd'
 import {
   MoneyCollectOutlined,
   DollarCircleOutlined,
@@ -24,7 +24,6 @@ const CryptoDetails = () => {
   const { coinId } = useParams()
   const { data, isFetching } = useGetCryptoDetailsQuery(coinId)
   const cryptoDetails = data?.data?.coin
-  console.log(data, 'data')
 
   const time = ['3h', '24h', '7d', '30d', '1y', '3m', '3y', '5y']
 
