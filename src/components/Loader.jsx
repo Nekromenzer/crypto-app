@@ -1,10 +1,10 @@
-import React from 'react';
-import { Spin } from 'antd';
+import React from 'react'
+import { Spin } from 'antd'
 
 const Loader = () => (
-  <div className="loader" my={6}>
+  <div className='loader' style={{ minHeight: '50vh' }}>
     <Spin />
   </div>
-);
+)
 
-export default Loader;
+export default Loader
