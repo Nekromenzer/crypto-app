@@ -17,10 +17,11 @@ LinkedIn - <a href="https://www.linkedin.com/in/maneesha-gimshan/">Maneesha Gims
 <h3>To Start..</h3>
 <ol>
     <li>npm install</li>
+    <li><b>Update API key in env File</b></li>
     <li>npm start</li>
+    <li>project will start in http://localhost:3000/ </li>
 </ol>
 
-<p>project will start in http://localhost:3000/ </p> 
 
 
 
